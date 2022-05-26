@@ -1,0 +1,22 @@
+.notification {
+    padding: 25px;
+    background: #efefef;
+    border-top: 2px solid #a18a68;
+    margin: 50px 0;
+    @include flex(flex-start, center);
+
+    svg {
+        --size: 18px;
+        width: var(--size);
+        height: var(--size);
+        margin-right: 12px;
+        color: #a18a68;
+    }
+
+    span {
+        color: #333;
+        font-size: 1.6rem;
+
+        font-weight: 400;
+    }
+}

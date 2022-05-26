@@ -1,0 +1,249 @@
+.detail {
+    &-product {
+        margin-top: 25px;
+
+        &__nav {
+            margin-bottom: 50px;
+            &__menu {
+                @include flex(flex-start, center);
+                border-bottom: 1px solid #ccc;
+                margin-bottom: 22px;
+                &__item {
+                    padding: 25px 18px;
+                    font-size: 1.4rem;
+                    color: #333;
+                    cursor: pointer;
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                }
+
+                &__item.active {
+                    border-bottom: 1px solid #333;
+                }
+            }
+
+            &__description {
+                font-size: 1.4rem;
+                color: #333;
+                display: none;
+            }
+
+            &__aditional-information {
+                display: none;
+
+                &__note {
+                    @include flex(flex-start, center);
+                    margin-bottom: 10px;
+                    span {
+                        color: #555;
+                        font-size: 1.4rem;
+
+                        &:first-child {
+                            font-weight: bold;
+                            color: #333;
+                        }
+
+                        &:last-child {
+                            margin-left: 6px;
+                        }
+                    }
+                }
+            }
+
+            &__review {
+                @include flex(unset, unset);
+            }
+        }
+
+        &__related {
+            padding-bottom: 30px;
+            &__title {
+                font-size: 2.2rem;
+                color: #333;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            &__product {
+                @include flex(space-between, center);
+                flex-wrap: wrap;
+            }
+        }
+    }
+    &-product__top {
+        @include flex(unset, unset);
+        height: 60vh;
+        margin-bottom: 80px;
+    }
+    &-product__top__left {
+        width: 50%;
+        @include flex(unset, center);
+        height: 100%;
+
+        & > * {
+            height: 100%;
+        }
+    }
+    &-product__top__left__items {
+        width: 20%;
+        @include flex(space-between, center);
+        flex-direction: column;
+
+        &__img {
+            width: 100px;
+            height: 100px;
+            margin: 6px 0;
+            img {
+                width: 100%;
+                border-radius: 15px;
+                cursor: pointer;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    &-product__top__left__avatar {
+        width: 80%;
+
+        img {
+            height: 100%;
+            padding-left: 6px;
+            object-fit: cover;
+        }
+    }
+    &-product__top__right {
+        padding-left: 45px;
+
+        &__title {
+            font-size: 22px;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        &__price {
+            font-size: 1.6rem;
+            color: $primary-color;
+            font-weight: 500;
+            margin-bottom: 50px;
+        }
+
+        &__star {
+            @include flex(flex-start, center);
+            margin-bottom: 16px;
+            svg {
+                margin: 3px;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            span {
+                margin-left: 6px;
+                font-size: 1rem;
+                color: #aaa;
+            }
+        }
+
+        &__description {
+            font-size: 1.6rem;
+            color: #555;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        &__wrapper-count {
+            @include flex(flex-start, center);
+            margin-bottom: 50px;
+            &__quantity {
+                @include flex(flex-start, center);
+                margin-right: 12px;
+                span {
+                    width: 40px;
+                    height: 45px;
+                    @include flex(center, center);
+                    background-color: #ececed;
+                    font-size: 1.4rem;
+                    color: #333;
+                    cursor: pointer;
+
+                    &:nth-child(2) {
+                        cursor: unset;
+                    }
+                }
+            }
+
+            &__add-cart {
+                flex-grow: 1;
+
+                button {
+                    width: 100%;
+                    @include flex(center, center);
+                    padding: 12px 0;
+                    border: 1px solid #333;
+                    background: transparent;
+                    border-radius: 3px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__social {
+            @include flex(flex-start, center);
+            margin-bottom: 20px;
+            &__icon {
+                --padding-size: 20px;
+                &:first-child {
+                    border-right: 1px solid #ccc;
+                    padding-right: var(--padding-size);
+                    margin-left: 0;
+                }
+                &:nth-child(2) {
+                    padding-left: var(--padding-size);
+                }
+                svg {
+                    --size: 20px;
+                    width: var(--size);
+                    height: var(--size);
+                    color: #555;
+                    margin: 0 8px;
+
+                    cursor: pointer;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        &__note {
+            @include flex(flex-start, center);
+            margin-bottom: 6px;
+
+            span {
+                font-size: 1.4rem;
+                color: #555;
+                &:first-child {
+                    color: #333;
+                    font-weight: bold;
+                }
+
+                &:last-child {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}

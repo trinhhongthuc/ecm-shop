@@ -1,0 +1,51 @@
+.check-out-detail {
+    width: 60%;
+    margin-right: 50px;
+
+    &__title {
+        font-size: 1.8rem;
+        color: #333;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+
+    &__wrapper {
+        margin-bottom: 18px;
+        input {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            font-size: 1.3rem;
+            color: #333;
+            padding: 8px 0;
+            outline: none;
+            flex-grow: 1;
+            margin-right: 12px;
+            width: 100%;
+        }
+    }
+
+    &__accept {
+        @include flex(flex-start, center);
+        margin-bottom: 14px;
+        input {
+            margin-right: 8px;
+            width: 14px;
+            height: 14px;
+        }
+
+        label {
+            font-size: 1.3rem;
+            color: #333;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+
+    &__wrapper.check-out-detail__wrapper--name {
+        @include flex(space-between, center);
+
+        input {
+            width: 50%;
+        }
+    }
+}

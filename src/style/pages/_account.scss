@@ -1,0 +1,106 @@
+.account {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    &__wrapper {
+        width: 350px;
+        margin: 0 auto;
+
+        &__button-switch {
+            background: #efefef;
+            padding: 6px;
+            border-radius: 3px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+            @include flex(unset, center);
+
+            button {
+                width: 50%;
+                text-align: center;
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: #333;
+
+                border: none;
+                outline: none;
+                padding: 5px 0;
+
+                cursor: pointer;
+            }
+
+            button.active {
+                background-color: #fff;
+                border-radius: 3px;
+            }
+        }
+
+        &__input {
+            width: 100%;
+
+            input {
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #ccc;
+                padding: 8px 0;
+                margin-bottom: 12px;
+                outline: none;
+
+                font-size: 1.3rem;
+                color: #333;
+                font-weight: 400;
+            }
+
+            .err-message {
+                color: red;
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+                text-transform: capitalize;
+            }
+        }
+
+        &__accept {
+            @include flex(flex-start, center);
+            margin-bottom: 30px;
+            input {
+                --size: 14px;
+                width: var(--size);
+                height: var(--size);
+                margin-right: 8px;
+            }
+
+            label {
+                font-weight: 500;
+                font-size: 1.3rem;
+                color: #333;
+                cursor: pointer;
+            }
+        }
+
+        &__submit {
+            width: 100%;
+            margin-bottom: 12px;
+            button {
+                background: #333;
+                padding: 8px 24px;
+                color: #fff;
+                width: 100%;
+
+                font-size: 1.4rem;
+                font-weight: 500;
+
+                border-radius: 3px;
+                outline: none;
+                border: none;
+
+                cursor: pointer;
+            }
+        }
+
+        &__note {
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: #333;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.comment {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 15px;
+
+    &:last-child {
+        border: none;
+    }
+    &__title {
+        font-size: 1.6rem;
+        color: #333;
+        font-weight: 400;
+        margin-bottom: 12px;
+
+        span {
+            font-size: 1.2rem;
+            color: #555;
+            display: inline-block;
+            margin-left: 12px;
+        }
+    }
+
+    &__star {
+        @include flex(flex-start, center);
+        margin-bottom: 12px;
+        &__icon {
+            margin: 0 4px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            svg {
+                --size: 20px;
+                width: var(--size);
+                height: var(--size);
+
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__description {
+        p {
+            font-size: 1.4rem;
+            color: #555;
+            font-weight: 300;
+            line-height: 2.2rem;
+        }
+    }
+}

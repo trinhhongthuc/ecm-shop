@@ -1,0 +1,59 @@
+.check-out {
+    &__wrapper {
+        margin: 40px 0;
+        .title {
+            margin-bottom: 30px;
+        }
+
+        &__top {
+            margin-bottom: 30px;
+            width: 50%;
+
+            &__note {
+                font-size: 1.3rem;
+                color: #333;
+                font-weight: 400;
+                margin-bottom: 8px;
+                span {
+                    color: $primary-color;
+                    margin-right: 6px;
+                }
+            }
+
+            &__coupon {
+                border: 1px solid #ccc;
+                padding: 25px;
+
+                &__title {
+                    font-size: 1.3rem;
+                    color: $primary-color;
+                    font-weight: 400;
+                    margin-bottom: 22px;
+                }
+
+                &__input {
+                    @include flex(unset, unset);
+
+                    input {
+                        border: none;
+                        border-bottom: 1px solid #ccc;
+                        font-size: 1.3rem;
+                        color: #333;
+                        padding: 8px 0;
+                        outline: none;
+                        flex-grow: 1;
+                        margin-right: 12px;
+                    }
+
+                    button {
+                        width: 150px;
+                    }
+                }
+            }
+        }
+
+        &__content {
+            @include flex(unset, unset);
+        }
+    }
+}

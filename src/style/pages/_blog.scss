@@ -1,0 +1,27 @@
+.blog {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    &__title {
+        display: block;
+        font-size: 2.6rem;
+        color: #333;
+        font-weight: 400;
+
+        margin-bottom: 18px;
+    }
+
+    &__wrapper {
+        @include flex(unset, unset);
+
+        &__content {
+            @include flex(space-between, center);
+
+            flex-wrap: wrap;
+
+            width: 70%;
+            flex-grow: 1;
+            margin-left: 12px;
+            box-sizing: margin-left;
+        }
+    }
+}

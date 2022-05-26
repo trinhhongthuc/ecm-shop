@@ -1,0 +1,142 @@
+.cart {
+    &__wrapper {
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        .title {
+            margin-bottom: 25px;
+        }
+
+        &__content {
+            @include flex(unset, unset);
+
+            &__left {
+                width: 50%;
+
+                &__list {
+                    margin-bottom: 20px;
+                    li {
+                        padding: 20px 0;
+                        border-bottom: 1px solid #ccc;
+                    }
+                }
+
+                &__update-cart {
+                    width: 160px;
+                    margin-left: auto;
+                    margin-bottom: 40px;
+                }
+
+                &__coupon {
+                    @include flex(space-between, center);
+
+                    input {
+                        flex: 1;
+                        border: none;
+                        padding: 10px 0;
+
+                        border-bottom: 1px solid #ccc;
+                        font-size: 1.2rem;
+                        color: #707070;
+                        margin-right: 12px;
+
+                        outline: none;
+                    }
+
+                    &__apply {
+                        width: 160px;
+                    }
+                }
+            }
+
+            &__right {
+                width: 50%;
+                padding-left: 100px;
+                box-sizing: margin;
+                &__title {
+                    font-size: 2.2rem;
+                    color: #333;
+                    font-weight: 500;
+                    margin-bottom: 20px;
+                }
+
+                &__wrapper {
+                    @include flex(unset, unset);
+                    margin-bottom: 18px;
+                    border-bottom: 1px solid #ccc;
+                    padding-bottom: 25px;
+                    &__title {
+                        font-size: 1.6rem;
+                        color: #333;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        width: 150px;
+                        min-width: 150px;
+                    }
+
+                    &__content {
+                        &__note {
+                            color: #707070 !important;
+                            font-weight: 400;
+                            font-size: 1.4rem;
+                        }
+
+                        &__heading {
+                            font-size: 1.6rem;
+                            color: #333;
+                            font-weight: 400;
+                            text-transform: uppercase;
+                            margin-top: 25px;
+                            margin-bottom: 15px;
+                        }
+
+                        select {
+                            border: none;
+                            border-bottom: 1px solid #ccc;
+                            padding: 10px 0;
+                            width: 100%;
+                            outline: none;
+                            font-size: 1.4rem;
+                            color: #707070;
+                            font-weight: 400;
+                            margin-bottom: 15px;
+
+                            .selected-option {
+                                padding: 10px 0;
+                                width: 100%;
+                                outline: none;
+                                font-size: 1.4rem;
+                                color: #333;
+                                font-weight: 400;
+
+                                &:first-child {
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+
+                        &__update-total {
+                            button {
+                                padding-top: 12px;
+                                padding-bottom: 12px;
+                            }
+                        }
+                    }
+                }
+
+                &__txt {
+                    color: #333;
+                    padding: 25px 0;
+                    margin-bottom: 5px;
+                    @include flex(space-between, center);
+                    span {
+                        color: #333;
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

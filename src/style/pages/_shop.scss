@@ -1,0 +1,79 @@
+.shop {
+    &__wrapper {
+        display: flex;
+    }
+    &__title {
+        font-size: 2.2rem;
+        color: #333;
+        font-weight: bold;
+        margin: 20px 0 25px 0;
+        display: block;
+    }
+    &__right {
+        width: 75%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 25%;
+        padding-right: 12px;
+        box-sizing: border-box;
+
+        &__search {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            @include flex(space-between, center);
+            margin-bottom: 35px;
+            input {
+                border: none;
+                outline: none;
+                padding: 12px 0;
+                font-size: 1.6rem;
+                color: #333;
+                flex-grow: 1;
+            }
+
+            svg {
+                --size: 20px;
+                width: var(--size);
+                height: var(--size);
+                cursor: pointer;
+            }
+        }
+
+        &__select-sort {
+            margin-bottom: 12px;
+            select {
+                padding: 11px 12px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                width: 100%;
+                outline: none;
+            }
+        }
+
+        &__ranger-slide {
+            width: 100%;
+
+            .css-187mznn-MuiSlider-root {
+                color: #333 !important;
+                height: 2px;
+            }
+
+            &__item {
+                @include flex(space-between, center);
+                margin-top: 6px;
+                & > * {
+                    font-size: 1.4rem;
+                    color: #999;
+                }
+
+                &__txt {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

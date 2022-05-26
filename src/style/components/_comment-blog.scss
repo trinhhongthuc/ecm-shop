@@ -1,0 +1,47 @@
+.comments-blog {
+    @include flex(unset, unset);
+
+    &__avatar {
+        --size: 60px;
+        width: var(--size);
+        img {
+            width: var(--size);
+        }
+    }
+
+    &__content {
+        margin-left: 12px;
+        box-sizing: margin;
+        &__wrapper {
+            @include flex(unset, center);
+            margin-bottom: 12px;
+            &__title {
+                font-size: 1.6rem;
+                font-weight: 500;
+                margin-right: 8px;
+            }
+
+            &__day {
+                font-size: 1.1rem;
+                color: #707070;
+                font-weight: 300;
+            }
+
+            &__icon {
+                @include flex(unset, center);
+                margin-left: auto;
+                color: #707070;
+                cursor: pointer;
+                svg {
+                    margin-right: 6px;
+                }
+            }
+        }
+
+        &__message {
+            font-size: 1.3rem;
+            color: #707070;
+            font-weight: 400;
+        }
+    }
+}

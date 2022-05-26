@@ -1,0 +1,41 @@
+.blog-item {
+    padding: 0 12px;
+    margin-bottom: 40px;
+
+    box-sizing: padding;
+
+    &__img {
+        margin-bottom: 14px;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__day {
+        color: #707070;
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        color: #333;
+        font-weight: 500;
+        margin-bottom: 14px;
+    }
+
+    &__description {
+        color: #707070;
+        font-weight: 300;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    &__read-more {
+        font-size: 1.4rem;
+        color: $primary-color;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}

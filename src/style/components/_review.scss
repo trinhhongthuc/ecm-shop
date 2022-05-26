@@ -1,0 +1,9 @@
+.review {
+    width: 50%;
+    &__title {
+        font-size: 2rem;
+        color: #333;
+        font-weight: 400;
+        margin-bottom: 50px;
+    }
+}

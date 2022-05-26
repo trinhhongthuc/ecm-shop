@@ -1,0 +1,53 @@
+.slide-bar {
+    width: 30%;
+
+    &__search {
+        width: 100%;
+        margin-bottom: 30px;
+        &__input {
+            @include flex(unset, center);
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+
+            input {
+                border: none;
+                outline: none;
+                width: 100%;
+
+                padding: 10px 0;
+
+                font-size: 1.4rem;
+            }
+
+            svg {
+                --size: 23px;
+
+                width: var(--size);
+                height: var(--size);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__nav {
+        &__title {
+            font-size: 1.6rem;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+
+        &__menu {
+            @include flex(center, flex-start);
+            flex-direction: column;
+
+            &__item {
+                font-size: 1.3rem;
+                color: #555;
+                font-weight: 400;
+                margin: 6px 0;
+                cursor: pointer;
+            }
+        }
+    }
+}
